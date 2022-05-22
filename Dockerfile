@@ -1,4 +1,5 @@
 FROM bitnami/python:3.8
+RUN apt update && apt-get install libmariadb-dev-compat libmariadb-dev -y
 RUN mkdir /code
 ADD . /code
 WORKDIR /code
